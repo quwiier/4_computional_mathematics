@@ -82,7 +82,7 @@ def main():
     residuals = compute_residual(A, x, B)
 
     # Вывод треугольной матрицы (включая преобразованный столбец B)
-    print("\nТреугольная матрица после преобразований (с изменённым B):")
+    print("\nТреугольная матрица после преобразований:")
     for i in range(n):
         print(" ".join(f"{num:.2f}" for num in U[i]) + f" | {B_transformed[i]:.2f}")
 
