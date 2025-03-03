@@ -87,7 +87,6 @@ if __name__ == "__main__":
     try:
         main()
     except ZeroDivisionError:
-        print("Ошибка: Деление на ноль!")
+        print("Система несовместная (0 на главной диагонали)")
     except Exception as e:
         print(f"Произошла ошибка: {e}")
-
