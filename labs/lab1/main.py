@@ -19,7 +19,7 @@ def gauss_elimination_with_pivoting(A, B):
         if max_row != i:
             swap_rows(A, B, i, max_row)
 
-        # Преобразуем в верхнетреугольную форму
+        # Преобразуем в треугольную форму
         for j in range(i + 1, n):
             factor = A[j][i] / A[i][i]
             for k in range(i, n):
