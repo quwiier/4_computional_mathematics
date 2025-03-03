@@ -84,4 +84,10 @@ def main():
     print("\nВектор невязок:", " ".join(f"{r:.6f}" for r in residuals))
 
 if __name__ == "__main__":
-    main()
+    try:
+        main()
+    except ZeroDivisionError:
+        print("Ошибка: Деление на ноль!")
+    except Exception as e:
+        print(f"Произошла ошибка: {e}")
+
