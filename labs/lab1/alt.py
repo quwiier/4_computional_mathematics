@@ -8,7 +8,7 @@ def swap_rows(A, B, row1, row2):
 def gauss_elimination_with_pivoting(A, B):
     """Метод Гаусса с выбором главного элемента по столбцам и подсчётом перестановок"""
     n = len(A)
-    swap_count = 0  # Счётчик перестановок
+    swap_count = 0
 
     for i in range(n):
         max_row = i
@@ -18,7 +18,7 @@ def gauss_elimination_with_pivoting(A, B):
 
         if max_row != i:
             swap_rows(A, B, i, max_row)
-            swap_count += 1  # Учитываем перестановку
+            swap_count += 1
 
         for j in range(i + 1, n):
             factor = A[j][i] / A[i][i]
@@ -30,7 +30,7 @@ def gauss_elimination_with_pivoting(A, B):
 
 def compute_determinant(U, swap_count):
     """Вычисляет определитель с учетом количества перестановок"""
-    det = (-1) ** swap_count  # Учитываем изменение знака
+    det = (-1) ** swap_count
     for i in range(len(U)):
         det *= U[i][i]
     return det
